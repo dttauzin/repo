@@ -1,2 +1,2 @@
 # repo
-SiLOX OS Repository (preeseed, zip, init, live)
+SiLOX OS Repository (preseed, zip, init, live)
