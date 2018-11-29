@@ -30,7 +30,7 @@ mkdir /home/user/Downloads
 mkdir /home/user/.config
 mkdir /home/user/.config/autostart
 cd /home/user/Downloads
-wget https://www.dropbox.com/s/ucenpdblgodkh68/SiLOX%20OS%20Setup.zip
+wget https://www.dropbox.com/s/ucenpdblgodkh68/SiLOX\ OS\ Setup.zip
 unzip *.zip
 chown -R user:user /home/user/Downloads
 chown -R user:user /home/user/.config
