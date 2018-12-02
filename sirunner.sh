@@ -10,7 +10,6 @@
 #
 #
 #
-chroot /target/;     \
 in-target cp http://sideustech.github.io/repo/sudoers /target/etc;     \
 in-target cp http://sideustech.github.io/repo/SiDEUS-SiLOX-OS-SPLASH.png /target/boot/grub;     \
 #in-target cp lsb-release /target/etc;     \
