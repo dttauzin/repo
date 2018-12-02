@@ -11,8 +11,8 @@
 #
 #
 chroot /target/;     \
-in-target cp sudoers /target/etc;     \
-in-target cp SiDEUS-SiLOX-OS-SPLASH.png /target/boot/grub;     \
+in-target cp http://sideustech.github.io/repo/sudoers /target/etc;     \
+in-target cp http://sideustech.github.io/repo/SiDEUS-SiLOX-OS-SPLASH.png /target/boot/grub;     \
 #in-target cp lsb-release /target/etc;     \
 #in-target cp grub /target/etc/default;     \
 #in-target cp sources.list /target/etc/apt;     \
