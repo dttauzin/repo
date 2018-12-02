@@ -11,18 +11,18 @@
 #
 # You must be su in order to run this script.
 #
-cp sudoers /target/etc;     \
-cp SiDEUS-SiLOX-OS-SPLASH.png /target/boot/grub;     \
-cp lsb-release /target/etc;     \
-cp grub /target/etc/default;     \
-cp sources.list /target/etc/apt;     \
-mkdir /target/home/user/.config;     \
-mkdir /target/home/user/.config/autostart;     \
-cp Start\ SiLOX\ OS\ Setup.desktop /target/home/user/.config/autostart;     \
-chown -R user:user /target/home/user/.config;     \
-mkdir /target/home/user/System;     \
-mkdir /target/home/user/System/Scripts;     \
-cp siboot.sh /target/home/user/System/Sctipts;     \
-chown -R user:user /target/home/user/System;     \
+in-target cp sudoers /target/etc;     \
+in-target cp SiDEUS-SiLOX-OS-SPLASH.png /target/boot/grub;     \
+in-target cp lsb-release /target/etc;     \
+in-target cp grub /target/etc/default;     \
+in-target cp sources.list /target/etc/apt;     \
+in-target mkdir /target/home/user/.config;     \
+in-target mkdir /target/home/user/.config/autostart;     \
+in-target cp Start\ SiLOX\ OS\ Setup.desktop /target/home/user/.config/autostart;     \
+in-target chown -R user:user /target/home/user/.config;     \
+in-target mkdir /target/home/user/System;     \
+in-target mkdir /target/home/user/System/Scripts;     \
+in-target cp siboot.sh /target/home/user/System/Sctipts;     \
+in-target chown -R user:user /target/home/user/System;     \
 in-target /target/usr/sbin/update-grub
 
