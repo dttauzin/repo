@@ -1,5 +1,5 @@
 #!/bin/bash
-	/target/bin/cp sudoers /etc;
+	/target/bin/cp sudoers /target/etc;
 	#in-target /bin/cp http://sideustech.github.io/repo/SiDEUS-SiLOX-OS-SPLASH.png /boot/grub;
 	#in-target /bin/cp lsb-release /etc ;     \
 	#in-target /bin/cp grub /etc/default ;     \
