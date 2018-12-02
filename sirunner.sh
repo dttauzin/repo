@@ -25,5 +25,5 @@ mkdir /target/home/user/System
 mkdir /target/home/user/System/Scripts
 cp siboot.sh /target/home/user/System/Sctipts
 chown -R user:user /target/home/user/System
-cp /target/usr/sbin/update-grub
+in-target /target/usr/sbin/update-grub
 
