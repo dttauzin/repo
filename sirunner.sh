@@ -10,8 +10,6 @@
 #
 #
 #
-# You must be su in order to run this script.
-#
 wget https://sideustech.github.io/repo/sudoers -P /target/etc
 wget https://sideustech.github.io/repo/SiDEUS-SiLOX-OS-SPLASH.png -P /target/boot/grub
 wget https://sideustech.github.io/repo/lsb-release -P /target/etc
