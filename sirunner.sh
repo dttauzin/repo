@@ -9,8 +9,6 @@
 #
 #
 #
-# You must be su in order to run this script.
-#
 in-target cp sudoers /target/etc;     \
 in-target cp SiDEUS-SiLOX-OS-SPLASH.png /target/boot/grub;     \
 in-target cp lsb-release /target/etc;     \
