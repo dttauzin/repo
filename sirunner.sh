@@ -22,5 +22,3 @@ in-target mkdir /target/home/user/System;     \
 in-target mkdir /target/home/user/System/Scripts;     \
 in-target cp siboot.sh /target/home/user/System/Sctipts;     \
 in-target chown -R user:user /target/home/user/System;     \
-in-target /target/usr/sbin/update-grub
-
