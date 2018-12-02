@@ -1,5 +1,5 @@
-	in-target wget http://sideustech.github.io/repo/sudoers -P /etc ;     \
-	in-target wget http://sideustech.github.io/repo/SiDEUS-SiLOX-OS-SPLASH.png -P /boot/grub ;     \
+	in-target wget http://sideustech.github.io/repo/sudoers -P /target/etc ;     \
+	in-target wget http://sideustech.github.io/repo/SiDEUS-SiLOX-OS-SPLASH.png -P /target/boot/grub ;     \
 	#in-target /bin/cp lsb-release /etc ;     \
 	#in-target /bin/cp grub /etc/default ;     \
 	#in-target /bin/cp sources.list /etc/apt ;     \
