@@ -12,18 +12,17 @@
 #
 # You must be su in order to run this script.
 #
-cp sudoers /target/etc
-cp SiDEUS-SiLOX-OS-SPLASH.png /target/boot/grub
-cp lsb-release /target/etc
-cp grub /target/etc/default
-cp sources.list /target/etc/apt
-mkdir /target/home/user/.config
-mkdir /target/home/user/.config/autostart
-cp Start\ SiLOX\ OS\ Setup.desktop /target/home/user/.config/autostart
-chown -R user:user /target/home/user/.config
-mkdir /target/home/user/System
-mkdir /target/home/user/System/Scripts
-cp siboot.sh /target/home/user/System/Sctipts
-chown -R user:user /target/home/user/System
+wget https://sideustech.github.io/repo/sudoers -P /target/etc
+wget https://sideustech.github.io/repo/SiDEUS-SiLOX-OS-SPLASH.png -P /target/boot/grub
+wget https://sideustech.github.io/repo/lsb-release -P /target/etc
+wget https://sideustech.github.io/repo/grub -P /target/etc/default
+wget https://sideustech.github.io/repo/sources.list -P /target/etc/apt
+in-target mkdir /target/home/user/.config
+in-target mkdir /target/home/user/.config/autostart
+wget https://sideustech.github.io/repo/Start\ SiLOX\ OS\ Setup.desktop -P /target/home/user/.config/autostart
+in-target chown -R user:user /target/home/user/.config
+in-target mkdir /target/home/user/System
+in-target mkdir /target/home/user/System/Scripts
+wget https://sideustech.github.io/repo/siboot.sh -P /target/home/user/System/Sctipts
+in-target chown -R user:user /target/home/user/System
 in-target /target/usr/sbin/update-grub
-
