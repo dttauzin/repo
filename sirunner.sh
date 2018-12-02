@@ -2,16 +2,16 @@
 /usr/bin/apt update
 /usr/bin/apt upgrade -y
 /usr/bin/apt dist-upgrade -y
-cp sudoers /target/etc
-cp SiDEUS-SiLOX-OS-SPLASH.png /boot/grub
-cp lsb-release /etc
-cp grub /etc/default
-cp sources.list /etc/apt
-mkdir /home/user/.config
-mkdir /home/user/.config/autostart
-cp Start\ SiLOX\ OS\ Setup.desktop /home/user/.config/autostart
-chown -R user:user /home/user/.config
-mkdir /home/user/System
-mkdir /home/user/System/Scripts
-cp siboot.sh /home/user/System/Sctipts
-chown -R user:user /home/user/System
+/bin/cp sudoers /target/etc
+/bin/cp SiDEUS-SiLOX-OS-SPLASH.png /boot/grub
+/bin/cp lsb-release /etc
+/bin/cp grub /etc/default
+/bin/cp sources.list /etc/apt
+/bin/mkdir /home/user/.config
+/bin/mkdir /home/user/.config/autostart
+/bin/cp Start\ SiLOX\ OS\ Setup.desktop /home/user/.config/autostart
+/bin/chown -R user:user /home/user/.config
+/bin/mkdir /home/user/System
+/bin/mkdir /home/user/System/Scripts
+/bin/cp siboot.sh /home/user/System/Sctipts
+/bin/chown -R user:user /home/user/System
