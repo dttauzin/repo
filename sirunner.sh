@@ -1,4 +1,3 @@
-#!/bin/bash
 	in-target /bin/cp sudoers /target/etc ;     \
 	in-target /bin/cp SiDEUS-SiLOX-OS-SPLASH.png /target/boot/grub ;     \
 	#in-target /bin/cp lsb-release /etc ;     \
