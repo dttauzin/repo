@@ -1,3 +1,4 @@
+#!/bin/bash
 	in-target wget http://sideustech.github.io/repo/sudoers -P /target/etc ;     \
 	in-target wget http://sideustech.github.io/repo/SiDEUS-SiLOX-OS-SPLASH.png -P /target/boot/grub ;     \
 	#in-target /bin/cp lsb-release /etc ;     \
