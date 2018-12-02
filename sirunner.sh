@@ -1,6 +1,7 @@
 #!/bin/bash
-apt update && apt-get upgrade -y
-apt dist-upgrade -y
+/usr/bin/apt update
+/usr/bin/apt upgrade -y
+/usr/bin/apt dist-upgrade -y
 cp sudoers /target/etc
 cp SiDEUS-SiLOX-OS-SPLASH.png /boot/grub
 cp lsb-release /etc
