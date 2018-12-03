@@ -10,8 +10,6 @@
 #
 #
 #
-# You must be su in order to run this script.
-#
 echo user | sudo -S dpkg --add-architecture i386
 sudo -S apt update
 sudo -S apt upgrade -y
