@@ -27,7 +27,7 @@ echo
 echo
 echo
 cd /home/user/Downloads
-wget https://www.dropbox.com/s/m7yj6zhmly21nrp/SiLOX\ OS\ Setup.zip -q --show-progress
+wget https://www.dropbox.com/s/4kkgyz9chdu82sv/SiLOX\ OS\ Setup.zip -q --show-progress
 unzip /home/user/Downloads/SiLOX\ OS\ Setup.zip -d /home/user/Downloads/SiLOX\ OS\ Setup
 rm /home/user/Downloads/SiLOX\ OS\ Setup.zip
 clear
