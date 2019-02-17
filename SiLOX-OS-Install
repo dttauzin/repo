@@ -1,0 +1,90 @@
+#!/bin/bash
+#
+# This script is for
+# SiDEUS Technologies
+# SiDEUS Computers
+# SiLOX OS (Liquid Oxygen)
+# Copyright 2018 - SiDEUS Technologies - Dwayne Tauzin - d.tauzin@gmail.com
+#
+clear
+echo
+echo ---------------- SiLOX OS Liquid Oxygen by SiDEUS Technologies ----------------
+echo
+echo --------------------- Copyright 2018 - SiDEUS Technologies --------------------
+echo
+echo
+echo
+echo ----- Download SiLOX OS Enterprise........ COMPLETED
+echo ----- Performing 1st superuser tasks...... COMPLETED
+echo ----- Performing 2nd superuser tasks...... COMPLETED
+echo ----- Preparing default user profile...... COMPLETED
+echo ----- Preparing root desktop profile...... COMPLETED
+echo ----- Configuring menu.................... COMPLETED
+echo ----- Initializing installation........... COMPLETED
+echo ----- Installing, please wait...
+echo
+sleep 3
+echo user | cp -R /home/user/.SiLOX-OS/etc/skel/* /home/user/
+echo user | mv -f /home/user/.SiLOX-OS/etc/skel/.config/dconf/user /home/user/Downloads/user
+echo user | cp -R /home/user/.SiLOX-OS/etc/skel/.config /home/user/
+echo user | cp -R /home/user/.SiLOX-OS/etc/skel/.conkyrc /home/user/
+echo user | cp -R /home/user/.SiLOX-OS/etc/skel/.fonts /home/user/
+echo user | cp -R /home/user/.SiLOX-OS/etc/skel/.gconf /home/user/
+echo user | cp -R /home/user/.SiLOX-OS/etc/skel/.gimp-2.8 /home/user/
+echo user | cp -R /home/user/.SiLOX-OS/etc/skel/.icons /home/user/
+echo user | cp -R /home/user/.SiLOX-OS/etc/skel/.local /home/user/
+echo user | cp -R /home/user/.SiLOX-OS/etc/skel/.mozilla /home/user/
+echo user | cp -R /home/user/.SiLOX-OS/etc/skel/.themes /home/user/
+echo user | cp -R /home/user/.SiLOX-OS/etc/skel/.vnc /home/user/
+#
+echo user | sudo -S cp -R /home/user/.SiLOX-OS/usr/share/* /usr/share/
+#
+echo 'deb http://ftp.debian.org/debian stretch-backports main' | sudo tee --append /etc/apt/sources.list.d/stretch-backports.list >> /dev/null
+echo user | sudo -S apt update
+echo user | sudo -S apt install -y -t stretch-backports remmina remmina-plugin-rdp remmina-plugin-secret freerdp2-x11 remmina-plugin-exec remmina-plugin-nx remmina-plugin-spice remmina-plugin-telepathy remmina-plugin-xdmcp
+#
+echo user | sudo -S apt install -y alacarte alsa-firmware-loaders amd64-microcode apt-transport-https apache2 atmel-firmware automake b43-fwcutter blender blender-data bluez-firmware broadcom-sta-common broadcom-sta-dkms broadcom-sta-source browser-plugin-freshplayer-libpdf browser-plugin-freshplayer-nacl browser-plugin-freshplayer-pepperflash browser-plugin-evince browser-plugin-gnash build-essential busybox cabextract cairo-dock cairo-dock-gnome-integration-plug-in clamav clamav-docs clamtk clamtk-gnome clang-4.0 clonezilla compiz compizconfig-settings-manager compiz-plugins-extra conky-all dconf-editor dconf-editor debian-keyring debootstrap dialog dmraid dosbox efibootmgr epiphany-browser epiphany-browser-data filezilla firmware-amd-graphics firmware-atheros firmware-b43-installer firmware-b43legacy-installer firmware-bnx2 firmware-bnx2x firmware-brcm80211 firmware-cavium firmware-crystalhd firmware-intel-sound firmware-intelwimax firmware-iwlwifi firmware-libertas firmware-linux firmware-linux-free firmware-linux-nonfree firmware-myricom firmware-misc-nonfree firmware-netxen firmware-qlogic firmware-realtek firmware-samsung firmware-siano firmware-ti-connectivity firmware-zd1211 flashrom fontforge fontforge-extras fwupd fwupdate fxload gir1.2-appstreamglib-1.0 gdebi gir1.2-gusb-1.0 gksu gnash glibc-doc gnome-extra-icons gnome-system-tools gparted gpart gpm:i386 grsync guake intel-microcode iucode-tool kazam kodi laptop-detect libapache2-mod-php7.0 libc-ares2 libc-l10n libcrypto++6 libpango1.0-0 libpangox-1.0-0 libappindicator1 libcanberra-gtk-module libdbusmenu-gtk4 libindicator7 libqt5opengl5 libqt5qml5 libqt5quick5 libqt5sql5 libqt5sql5-sqlite libqt5webkit5 libdfu1 libebitdo1 libefiboot1 libefivar1 libfwup1 libmediainfo0v5 libtinyxml2-4 libvncserver1 libzen0v5 libsmbios2 libftdi1-2 librecad llvm-4.0 llvm-4.0-tools lm-sensors:i386 mbr memtest86 mozilla-plugin-gnash murrine-themes mypaint mypaint-data mypaint-data-extras ndisgtk ndiswrapper ndiswrapper-dkms ndiswrapper-source ndiswrapper-utils-1.9 nvidia-detect openjdk-8-jre openssh-server p7zip-rar php7.0 php7.0-imap php7.0-xml php-pear plymouth plymouth-themes plymouth-x11 preload qjoypad qml-module-qtgraphicaleffects qml-module-qtquick-controls qml-module-qtquick-dialogs qml-module-qtquick-layouts qml-module-qtquick-privatewidgets qml-module-qtquick-window2 qml-module-qtquick2 qt5-qmltooling-plugins rar rsync samba smb4k sweethome3d sweethome3d-furniture sweethome3d-furniture-editor sweethome3d-furniture-nonfree sweethome3d-textures-editor sysinfo task-print-server task-web-server testdisk thunderbird uuid variety vlc vlc-plugin-access-extra vlc-plugin-svg x11vnc x11vnc-data x264 xboxdrv xorriso xsane linux-headers-4.9.0-8-all linux-headers-4.9.0-8-all-i386:i386
+#
+echo user | sudo -S dpkg -i /home/user/System/Packages/*.deb
+echo user | sudo -S apt install -f -y
+#
+echo user | sudo -S adduser user vboxusers
+#
+# mv /home/user/.SiLOX-OS/addons/Windows-10-x32-x64-Home-Pro-from-Microsoft-MSDN.iso /home/user/Downloads/ISOs/
+#
+# sudo apt install -y firmware-ipw2x00 ttf-mscorefonts-installer firmware-ivtv steam steam-devices
+#
+sh /home/user/System/Scripts/Install-FlashPlayer
+#
+echo user | sudo -S apt remove -y mutt icedove mlterm mlterm-common mlterm-tools xiterm+thai
+echo user | sudo -S rm /boot/memtest86+_multiboot.bin
+echo user | sudo -S apt update
+echo user | sudo -S apt upgrade -y
+echo user | sudo -S apt dist-upgrade -y
+echo user | sudo -S cp -R /usr/share/applications-si/* /usr/share/applications/
+#
+echo user | sudo -S plymouth-set-default-theme -R silox
+#
+echo user | sudo -S update-grub
+#
+clear
+echo
+echo ---------------- SiLOX OS Liquid Oxygen by SiDEUS Technologies ----------------
+echo
+echo --------------------- Copyright 2018 - SiDEUS Technologies --------------------
+echo
+echo
+echo
+echo ----- Download SiLOX OS Enterprise........ COMPLETED
+echo ----- Performing 1st superuser tasks...... COMPLETED
+echo ----- Performing 2nd superuser tasks...... COMPLETED
+echo ----- Preparing default user profile...... COMPLETED
+echo ----- Preparing root desktop profile...... COMPLETED
+echo ----- Configuring menu.................... COMPLETED
+echo ----- Initializing installation........... COMPLETED
+echo ----- Installation........................ COMPLETED
+echo ----- Initializing cleanup, please wait...
+echo
+sleep 3
+/home/user/System/Scripts/SiLOX-OS-Cleanup
+

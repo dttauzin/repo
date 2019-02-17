@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+# This script is for
+# SiDEUS Technologies
+# SiDEUS Computers
+# SiLOX OS (Liquid Oxygen)
+# Copyright 2018 - SiDEUS Technologies - Dwayne Tauzin - d.tauzin@gmail.com
+#
+#
+clear
+echo
+echo ---------------- SiLOX OS Liquid Oxygen by SiDEUS Technologies ----------------
+echo
+echo --------------------- Copyright 2018 - SiDEUS Technologies --------------------
+echo
+echo
+echo
+echo ----- Download SiLOX OS Enterprise........ COMPLETED
+echo ----- Performing 1st superuser tasks...... COMPLETED
+echo ----- Performing 2nd superuser tasks...... COMPLETED
+echo ----- Preparing default user profile...... COMPLETED
+echo ----- Preparing root desktop profile...... COMPLETED
+echo ----- Configuring menu.................... COMPLETED
+echo ----- Initializing installation........... COMPLETED
+echo ----- Installation........................ COMPLETED
+echo ----- Initializing cleanup................ COMPLETED
+echo ----- Cleaning up, please wait...
+echo
+rm -f /home/user/.config/autostart/SiLOX-OS-Install.desktop
+rm -f /home/user/Downloads/SiLOX\ OS\ Setup/SiLOX-OS/SiLOX-OS-Setup
+rm -f /home/user/Downloads/SiLOX\ OS\ Setup/Double\ click\ to\ start\ SiLOX\ OS\ Setup.desktop
+mv -f /home/user/Downloads/SiLOX\ OS\ Setup/README.txt /home/user/Documents/README.txt
+
+rmdir /home/user/Downloads/SiLOX\ OS\ Setup
+cp -f /home/user/System/Programs/OpenShot/appimagekit-openshot-qt.desktop /home/user/.local/share/applications/
+cp -f /home/user/Desktop/LOOK\ HERE\ FIRST\ PLEASE/*.pdf /home/user/Documents/
+mv -f /home/user/.SiLOX-OS/VBoxExtensions /home/user/Downloads/
+sleep 3
+rm -R /home/user/.SiLOX-OS/*
+rmdir /home/user/.SiLOX-OS
+clear
+echo
+echo ---------------- SiLOX OS Liquid Oxygen by SiDEUS Technologies ----------------
+echo
+echo --------------------- Copyright 2018 - SiDEUS Technologies --------------------
+echo
+echo
+echo
+echo ----- Download SiLOX OS Enterprise........ COMPLETED
+echo ----- Performing 1st superuser tasks...... COMPLETED
+echo ----- Performing 2nd superuser tasks...... COMPLETED
+echo ----- Preparing default user profile...... COMPLETED
+echo ----- Preparing root desktop profile...... COMPLETED
+echo ----- Configuring menu.................... COMPLETED
+echo ----- Initializing installation........... COMPLETED
+echo ----- Installation........................ COMPLETED
+echo ----- Initializing cleanup................ COMPLETED
+echo ----- Cleaning up......................... COMPLETED
+echo
+echo ----- Final reboot initializing, please wait... Enjoy SiLOX OS...
+echo
+sleep 10
+sudo echo user | sudo -S reboot
+
+
+
+
